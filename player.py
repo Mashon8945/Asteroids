@@ -27,16 +27,16 @@ class Player(CircleShape):
     def update(self, dt):
         keys = pygame.key.get_pressed()
 
-        if keys[pygame.K_a]:
+        if keys[pygame.K_LEFT]:
             self.rotate(-dt) # left
 
-        if keys[pygame.K_d]:
+        if keys[pygame.K_RIGHT]:
             self.rotate(dt) # right
 
-        if keys[pygame.K_s]:
+        if keys[pygame.KEYDOWN]:
             self.move(-dt) # down
 
-        if keys[pygame.K_w]:
+        if keys[pygame.KEYUP]:
             self.move(dt) # up
 
         if keys[pygame.K_SPACE]:
